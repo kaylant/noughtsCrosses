@@ -30,7 +30,9 @@
                                     <constraint firstAttribute="width" constant="99" id="7cX-oj-QgK"/>
                                     <constraint firstAttribute="height" constant="127" id="m1F-nE-gpT"/>
                                 </constraints>
-                                <state key="normal" image="nought.png"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dJr-Ty-w4E"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RGV-nQ-hMM">
                                 <rect key="frame" x="138" y="156" width="99" height="127"/>
@@ -40,7 +42,9 @@
                                     <constraint firstAttribute="height" constant="127" id="Txl-wg-Fzu"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="127" id="ngF-GE-vaV"/>
                                 </constraints>
-                                <state key="normal" image="nought.png"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tJh-AC-goY"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IJn-Bn-IU8">
                                 <rect key="frame" x="12" y="284" width="99" height="127"/>
@@ -50,7 +54,9 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="99" id="Yen-Pu-1ty"/>
                                     <constraint firstAttribute="width" constant="99" id="oNe-Po-5Ym"/>
                                 </constraints>
-                                <state key="normal" image="nought.png"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i41-2Z-Mem"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ZW-pO-498">
                                 <rect key="frame" x="138" y="284" width="99" height="127"/>
@@ -62,7 +68,9 @@
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="99" id="u6u-KU-2Fy"/>
                                     <constraint firstAttribute="height" constant="127" id="zx0-Pc-C8t"/>
                                 </constraints>
-                                <state key="normal" image="nought.png"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O8R-vD-l3Q"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5NC-3O-gMZ">
                                 <rect key="frame" x="263" y="156" width="99" height="127"/>
@@ -74,7 +82,9 @@
                                     <constraint firstAttribute="width" constant="99" id="u3f-oB-niK"/>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="99" id="zDn-x0-9CM"/>
                                 </constraints>
-                                <state key="normal" image="nought.png"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g9F-lI-YkE"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vnt-tu-XZS">
                                 <rect key="frame" x="263" y="284" width="99" height="127"/>
@@ -88,7 +98,9 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="99" id="Qe2-4B-u8B"/>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="99" id="i3d-30-qGA"/>
                                 </constraints>
-                                <state key="normal" image="nought.png"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HdS-lq-W23"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="thw-u3-yRW">
                                 <rect key="frame" x="12" y="412" width="99" height="127"/>
@@ -100,7 +112,9 @@
                                     <constraint firstAttribute="width" constant="99" id="qwd-29-8gp"/>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="127" id="tLO-BC-cwZ"/>
                                 </constraints>
-                                <state key="normal" image="nought.png"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gGQ-A6-arK"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ljk-hY-na2">
                                 <rect key="frame" x="138" y="412" width="99" height="127"/>
@@ -114,7 +128,9 @@
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="99" id="rEU-Rr-HzT"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="127" id="v7I-zf-zEo"/>
                                 </constraints>
-                                <state key="normal" image="nought.png"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xGh-K6-nEh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ni-Cw-iMI">
                                 <rect key="frame" x="263" y="412" width="99" height="127"/>
@@ -130,7 +146,9 @@
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="99" id="olq-xK-jnL"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="99" id="r0Z-cj-T2K"/>
                                 </constraints>
-                                <state key="normal" image="nought.png"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wgb-5v-slt"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -159,6 +177,9 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="button" destination="Su6-r9-VXD" id="I8l-XB-bED"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -167,6 +188,5 @@
     </scenes>
     <resources>
         <image name="board.png" width="496" height="497"/>
-        <image name="nought.png" width="243" height="308"/>
     </resources>
 </document>
