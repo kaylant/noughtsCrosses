@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     var activePlayer = 1 // 1 = noughts, 2 = crosses
     
     var gameState = [0,0,0,0,0,0,0,0,0]
+    
+    let winningCombos = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]]
 
     @IBOutlet var button: UIButton!
     
@@ -35,6 +37,27 @@ class ViewController: UIViewController {
                 sender.setImage(UIImage(named: "cross.png"), forState: .Normal)
                 
                 activePlayer = 1
+                
+            }
+            
+            // loop through winning combinations to check if they are winners after images have been updated
+            
+            for combination in winningCombos {
+                
+                if (gameState[combination[0]] != 0 && gameState[combination[1]] == gameState[combination[1]] && gameState[combination[1]] == gameState[combination[2]]) {
+                    
+                    if gameState[combination[0]] == 1 {
+                        
+                        print("Noughts has won")
+                        
+                    } else {
+                        
+                        print("Crosses has won")
+                        
+                    }
+                
+                
+                }
                 
             }
             
