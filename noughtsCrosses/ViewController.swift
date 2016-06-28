@@ -15,13 +15,18 @@ class ViewController: UIViewController {
     var gameState = [0,0,0,0,0,0,0,0,0]
     
     let winningCombos = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]]
+    
+    // if the game is still in play
+    var gameActive = true
 
     @IBOutlet var button: UIButton!
+    
+    @IBOutlet var gameOverLabel: UILabel!
     
     // modify sender to know which button is tapped
     @IBAction func buttonPressed(sender: AnyObject) {
         
-        if (gameState[sender.tag] == 0) {
+        if (gameState[sender.tag] == 0 && gameActive == true) {
             
             gameState[sender.tag] = activePlayer
         
@@ -46,15 +51,26 @@ class ViewController: UIViewController {
                 
                 if (gameState[combination[0]] != 0 && gameState[combination[0]] == gameState[combination[1]] && gameState[combination[1]] == gameState[combination[2]]) {
                     
+                    // set gameActive to false bc game is over
+                    gameActive = false
+                    
                     if gameState[combination[0]] == 1 {
                         
-                        print("Noughts has won")
+                        gameOverLabel.text = "Noughts have won"
                         
                     } else {
                         
-                        print("Crosses has won")
+                        gameOverLabel.text = "Crosses have won"
                         
                     }
+                    
+                    gameOverLabel.hidden = false
+                    
+                    UIView.animateWithDuration(0.5, animations: {
+                        
+                        self.gameOverLabel.center = CGPointMake(self.gameOverLabel.center.x + 500, self.gameOverLabel.center.y)
+                        
+                    })
                 
                 
                 }
@@ -68,6 +84,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        // starts out with game label not showing
+        gameOverLabel.hidden = true
+        
+        gameOverLabel.center = CGPointMake(gameOverLabel.center.x - 500 , gameOverLabel.center.y)
     }
 
     override func didReceiveMemoryWarning() {
