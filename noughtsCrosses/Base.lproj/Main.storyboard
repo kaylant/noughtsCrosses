@@ -166,21 +166,14 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" tag="10" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3S5-Oj-aFj">
-                                <rect key="frame" x="138" y="152" width="99" height="30"/>
+                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3S5-Oj-aFj">
+                                <rect key="frame" x="138" y="412" width="99" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="99" id="8Ng-05-UTb"/>
-                                    <constraint firstAttribute="width" constant="99" id="MtI-M8-omh"/>
-                                    <constraint firstAttribute="height" constant="30" id="thx-X8-Jm3"/>
-                                    <constraint firstAttribute="height" constant="30" id="ykc-9Z-rDM"/>
+                                    <constraint firstAttribute="height" constant="30" id="HYq-H1-XQd"/>
+                                    <constraint firstAttribute="width" constant="99" id="wLv-Ni-cZG"/>
                                 </constraints>
                                 <state key="normal" title="Play Again"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="MtI-M8-omh"/>
-                                        <exclude reference="thx-X8-Jm3"/>
-                                    </mask>
-                                </variation>
                                 <connections>
                                     <action selector="playAgain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gf9-M8-Xyq"/>
                                 </connections>
@@ -193,6 +186,7 @@
                             <constraint firstItem="3S5-Oj-aFj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5LN-OE-riw"/>
                             <constraint firstItem="RGV-nQ-hMM" firstAttribute="leading" secondItem="frl-c2-VA5" secondAttribute="trailing" constant="-237" id="IGG-Hz-QQT"/>
                             <constraint firstItem="ljk-hY-na2" firstAttribute="leading" secondItem="thw-u3-yRW" secondAttribute="trailing" constant="27" id="JYb-io-mj0"/>
+                            <constraint firstItem="3S5-Oj-aFj" firstAttribute="top" secondItem="7ZW-pO-498" secondAttribute="bottom" constant="1" id="Kng-5v-yNf"/>
                             <constraint firstItem="frl-c2-VA5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="LB2-ih-dxQ"/>
                             <constraint firstItem="3S5-Oj-aFj" firstAttribute="top" secondItem="7ZW-pO-498" secondAttribute="bottom" constant="50" id="OQw-Si-fgy"/>
                             <constraint firstItem="vnt-tu-XZS" firstAttribute="top" secondItem="frl-c2-VA5" secondAttribute="bottom" constant="-237" id="QFQ-dF-Jhj"/>
@@ -221,6 +215,7 @@
                             <mask key="constraints">
                                 <exclude reference="OQw-Si-fgy"/>
                                 <exclude reference="R0e-WJ-5s0"/>
+                                <exclude reference="jzR-Cj-7Ky"/>
                             </mask>
                         </variation>
                     </view>

@@ -42,13 +42,14 @@ class ViewController: UIViewController {
         // starts out with game label not showing
         playAgainButton.hidden = true
         
-        playAgainButton.center = CGPointMake(gameOverLabel.center.x - 500 , playAgainButton.center.y + 100)
+        playAgainButton.center = CGPointMake(gameOverLabel.center.x - 500 , playAgainButton.center.y)
         
         //loop throught the buttons to remove the noughts and crosses
         var buttonToClear : UIButton
         
         for i in 0 ..< 9 {
             
+            // clearing buttons by the tag, set all other elements to have anything but 0 as a tag!
             buttonToClear = view.viewWithTag(i) as! UIButton
             
             buttonToClear.setImage(nil, forState: .Normal)
@@ -84,6 +85,7 @@ class ViewController: UIViewController {
             
             for combination in winningCombos {
                 
+                
                 if (gameState[combination[0]] != 0 && gameState[combination[0]] == gameState[combination[1]] && gameState[combination[1]] == gameState[combination[2]]) {
                     
                     // set gameActive to false bc game is over
@@ -99,26 +101,59 @@ class ViewController: UIViewController {
                         
                     }
                     
-                    gameOverLabel.hidden = false
-                    
-                    playAgainButton.hidden = false
-
-                    
-                    UIView.animateWithDuration(0.5, animations: {
-                        
-                        self.gameOverLabel.center = CGPointMake(self.gameOverLabel.center.x + 500, self.gameOverLabel.center.y)
-                        
-                        self.playAgainButton.center = CGPointMake(self.playAgainButton.center.x + 500, self.playAgainButton.center.y + 100)
-
-                        
-                    })
-                
+                    endGame()
                 
                 }
                 
             }
             
+            // also want to check if no one has won, because we haven't had a winning combo yet if we got to this chunk of code
+            // if game active is still true, 
+            // loop through and check to see if any of the button's states are 0
+            if gameActive == true {
+            
+                gameActive = false
+                
+                for buttonState in gameState {
+                    
+                    if buttonState == 0 {
+                        
+                        gameActive = true
+                        
+                    }
+                    
+                }
+                
+                if gameActive == false {
+                    
+                    gameOverLabel.text = "It's a draw!"
+                    
+                    endGame()
+                    
+                }
+                
+            }
+
+            
         }
+        
+    }
+    
+    func endGame() {
+        
+        gameOverLabel.hidden = false
+        
+        playAgainButton.hidden = false
+        
+        
+        UIView.animateWithDuration(0.5, animations: {
+            
+            self.gameOverLabel.center = CGPointMake(self.gameOverLabel.center.x + 500, self.gameOverLabel.center.y)
+            
+            self.playAgainButton.center = CGPointMake(self.playAgainButton.center.x + 500, self.playAgainButton.center.y + 100)
+            
+            
+        })
         
     }
     
@@ -130,6 +165,9 @@ class ViewController: UIViewController {
         gameOverLabel.hidden = true
         
         gameOverLabel.center = CGPointMake(gameOverLabel.center.x - 500 , gameOverLabel.center.y)
+        
+        playAgainButton.hidden = true
+        
     }
 
     override func didReceiveMemoryWarning() {
