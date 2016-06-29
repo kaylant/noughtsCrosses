@@ -23,6 +23,41 @@ class ViewController: UIViewController {
     
     @IBOutlet var gameOverLabel: UILabel!
     
+    @IBOutlet var playAgainButton: UIButton!
+    
+    
+    // want to start everything over again to reset the game
+    @IBAction func playAgain(sender: AnyObject) {
+        
+        gameState = [0,0,0,0,0,0,0,0,0]
+        
+        activePlayer = 1
+        
+        gameActive = true
+        
+        gameOverLabel.hidden = true
+        
+        gameOverLabel.center = CGPointMake(gameOverLabel.center.x - 500 , gameOverLabel.center.y)
+        
+        // starts out with game label not showing
+        playAgainButton.hidden = true
+        
+        playAgainButton.center = CGPointMake(gameOverLabel.center.x - 500 , playAgainButton.center.y + 100)
+        
+        //loop throught the buttons to remove the noughts and crosses
+        var buttonToClear : UIButton
+        
+        for i in 0 ..< 9 {
+            
+            buttonToClear = view.viewWithTag(i) as! UIButton
+            
+            buttonToClear.setImage(nil, forState: .Normal)
+            
+        }
+        
+        
+    }
+    
     // modify sender to know which button is tapped
     @IBAction func buttonPressed(sender: AnyObject) {
         
@@ -66,9 +101,15 @@ class ViewController: UIViewController {
                     
                     gameOverLabel.hidden = false
                     
+                    playAgainButton.hidden = false
+
+                    
                     UIView.animateWithDuration(0.5, animations: {
                         
                         self.gameOverLabel.center = CGPointMake(self.gameOverLabel.center.x + 500, self.gameOverLabel.center.y)
+                        
+                        self.playAgainButton.center = CGPointMake(self.playAgainButton.center.x + 500, self.playAgainButton.center.y + 100)
+
                         
                     })
                 
